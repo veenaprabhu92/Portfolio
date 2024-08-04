@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Logo and Navigation Items</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">VP</div>
+            <ul class="navigate_links">
+                <li><a href="#">HOME</a></li>
+        <li><a href="#about_me">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="hero-section">
+            <h2>Veena Prabhu</h2>
+            <p>Web Designer</p>
+        </div>
+    </header>
+
+    <section class="fsection"  id="about_me">
+        <h2 class="bounce-in">About Me</h2>
+        <div id="abtme">
+            <p>
+                Passionate web developer with a focus on creating visually stunning and user-friendly websites. Skilled in HTML, CSS, and JavaScript, with comprehensive training from Besant Technologies. Actively seeking an entry-level Front-End Developer role to design captivating and responsive user interfaces that engage and delight users.
+            </p><br />
+            <a href="E:\SQL_Class\DBMS.pdf" download="your_resume.pdf">
+                <button class="download_button">Download Resume</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="selected-works" id="projects">
+        <h2 class="bounce-in">Projects</h2>
+        <div class="works-container">
+            <!-- Work Card 1 -->
+            <div class="work-card">
+                <img src="images/photosnap.jpg" alt="Photograpy">
+                <div class="overlay">
+                    <a href="https://veenaprabhu92.github.io/Photosnap/" target="_blank">Photograpy Website</a>
+                </div>
+            </div>
+                <!-- Work Card 2 -->
+                <div class="work-card">
+                    <img src="images/technical-docu.png" alt="TechDoc" style="object-fit: fill;">
+                    <div class="overlay">
+                        <a href="https://veenaprabhu92.github.io/TechDoc/" target="_blank">Technical Documentation</a>
+                    </div>
+                </div>
+
+            <!-- Work Card 3 -->
+            <div class="work-card">
+                <img src="images/Restaurant.jpg" alt="Restaurant">
+                <div class="overlay">
+                    <a href="https://veenaprabhu92.github.io/Restaurant_Butter/" target="_blank">Restaurant Website</a>
+                </div>
+            </div>
+        </section>
+
+    <section class="fsection">
+        <h2 class="bounce-in">Skills</h2>
+        <div class="skill-main-container">
+            <div class="skill-name">HTML</div>
+            <div class="skill-container">
+                <div class="skill" style="--skill-width: 90%;">90%</div>
+            </div>
+    
+            <div class="skill-name">CSS</div>
+            <div class="skill-container">
+                <div class="skill" style="--skill-width: 80%;">80%</div>
+            </div>
+    
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-container">
+                <div class="skill" style="--skill-width: 85%;">85%</div>
+            </div>
+    
+            <div class="skill-name">PHP</div>
+            <div class="skill-container">
+                <div class="skill" style="--skill-width: 80%;">80%</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2 class="bounce-in">GET IN TOUCH</h2><br>
+        <div class="contact-container">
+            <!-- Left Side: Contact Information -->
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p>Please fill out the form on this section to contact me. Or Call Me</p>
+                <p><i class="fas fa-map-marker-alt"></i><strong>Address:</strong> Gillali,Udupi,Karntakara</p>
+                <p><i class="fas fa-envelope"></i><strong>Email:</strong> veena.v.prabhu92@gmail.com</p>
+                <p><i class="fas fa-phone"></i><strong>Phone:</strong> 7204941970</p>
+                <p><i class="fab fa-linkedin-in"></i><strong>LinkdIn:</strong> www.linkedin.com/in/veena-prabhu-7a9911255</p>
+
+            </div>
+    
+            <!-- Right Side: Contact Form -->
+            <div class="contact-form">
+                <h3>Contact Form</h3>
+                <form action="https://formspree.io/f/myzgwllr"
+                method="POST" id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Side: Footer Text -->
+            <div class="footer-text">
+                <p>&copy; 2024 Veena Prabhu. All rights reserved.</p>
+            </div>
+    
+            <!-- Right Side: Social Media Icons -->
+            <div class="footer-social">
+                <a href="https://github.com/veenaprabhu92" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/veenaprabhu2/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="www.linkedin.com/in/veena-prabhu-7a9911255" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 0) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    document.addEventListener("DOMContentLoaded", function() {
+        // Create an intersection observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add 'animate' class to skill bars when in view
+                    const skills = entry.target.querySelectorAll('.skill');
+                    skills.forEach(skill => {
+                        skill.classList.add('animate');
+                    });
+                    // Stop observing after adding the animation
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 }); // Adjust threshold if needed
+
+        // Observe the skills section
+        const skillSection = document.querySelector('.skill-main-container');
+        observer.observe(skillSection);
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    });
+
+    const h2Elements = document.querySelectorAll('.bounce-in');
+    h2Elements.forEach(h2 => {
+        observer.observe(h2);
+    });
+});
+function handleSubmit(event) {
+            event.preventDefault();
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</body>
+</html>
