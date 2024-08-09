@@ -171,7 +171,8 @@ margin-bottom: 5px;
 .html { width: 90%; background-color: #00444b; }
 .css { width: 80%; background-color: #00444b; }
 .js { width: 85%; background-color: #00444b; }
-.php { width: 80%; background-color: #00444b; }
+.bootstrap { width: 80%; background-color: #00444b; }
+.oracle { width: 80%; background-color: #00444b; }
 
 /* Selected Works Section */
 .selected-works {
